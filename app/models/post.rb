@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: { in: %w(Fiction Non-Fiction)}
   validates_with :validate(self.title)
 
-  def validate(title)
+  def clickbait(title)
     title.include?("Won't Believe")||title.include?("Secret")||title.include?("Top")||title.include?("Guess")
   end
 
