@@ -6,11 +6,6 @@ class Post < ActiveRecord::Base
   validate :clickbait
 
   def clickbait
-    if self.title.include?("Won't Believe")||self.title.include?("Secret")||self.title.include?("Top")||self.title.include?("Guess")
-      true
-    else
-      false
-    end
   end
 
 end
